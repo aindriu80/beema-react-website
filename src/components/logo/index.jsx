@@ -17,6 +17,7 @@ const LogoText = styled.div`
   margin-top: 6px;
   font-size: 40px;
   color: ${theme.primary};
+  font-weight: 700;
 `;
 
 export function Logo(props) {
