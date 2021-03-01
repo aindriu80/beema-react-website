@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 import BackgroundImg from "../../assets/pictures/company_team.jpg";
 import { Button } from "../../components/button/button";
-import { Logo } from "../../components/logo";
-import { Marginer } from "../../components/marginer";
+import { Logo } from "../../components/logo/logo";
+import { Marginer } from "../../components/marginer/marginer";
 import { DownArrow } from "../../components/downArrow/downArrow";
+import { Navbar } from "../../components/navbar/navbar";
 
 const TopContainer = styled.div`
   width: 100%;
@@ -43,6 +44,7 @@ export function TopSection(props) {
   return (
     <TopContainer>
       <BackgroundFilter>
+        <Navbar />
         <Marginer direction="vertical" margin="8rem" />
         <Logo />
         <Marginer direction="vertical" margin="3rem" />
