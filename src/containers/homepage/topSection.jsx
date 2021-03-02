@@ -1,4 +1,5 @@
 import React from "react";
+import { Element, scroller } from "react-scroll";
 import styled from "styled-components";
 
 import BackgroundImg from "../../assets/pictures/company_team.jpg";
@@ -41,21 +42,27 @@ const DownArrowContainer = styled.div`
 `;
 
 export function TopSection(props) {
+  const scrollToNextSection = () => {
+    scroller.scrollTo("servicesSection", { smooth: true, duration: 1500 });
+  };
+
   return (
-    <TopContainer>
-      <BackgroundFilter>
-        <Navbar />
-        <Marginer direction="vertical" margin="8rem" />
-        <Logo />
-        <Marginer direction="vertical" margin="3rem" />
-        <MotivationalText>Software Development</MotivationalText>
-        <MotivationalText>From the Best in the Industry</MotivationalText>
-        <Marginer direction="vertical" margin="2rem" />
-        <Button>Start Your Project</Button>
-        <DownArrowContainer>
-          <DownArrow />
-        </DownArrowContainer>
-      </BackgroundFilter>
-    </TopContainer>
+    <Element name="topSection">
+      <TopContainer>
+        <BackgroundFilter>
+          <Navbar />
+          <Marginer direction="vertical" margin="8rem" />
+          <Logo />
+          <Marginer direction="vertical" margin="3rem" />
+          <MotivationalText>Software Development</MotivationalText>
+          <MotivationalText>From the Best in the Industry</MotivationalText>
+          <Marginer direction="vertical" margin="2rem" />
+          <Button>Start Your Project</Button>
+          <DownArrowContainer onClick={scrollToNextSection}>
+            <DownArrow />
+          </DownArrowContainer>
+        </BackgroundFilter>
+      </TopContainer>
+    </Element>
   );
 }

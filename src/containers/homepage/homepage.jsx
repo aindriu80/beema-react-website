@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { ServicesSection } from "./servicesSection";
 import { TopSection } from "./topSection";
 
 const PageContainer = styled.div`
@@ -12,6 +13,7 @@ export function Homepage(props) {
   return (
     <PageContainer>
       <TopSection />
+      <ServicesSection />
     </PageContainer>
   );
 }
