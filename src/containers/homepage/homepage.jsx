@@ -2,6 +2,8 @@ import styled from "styled-components";
 import React from "react";
 import { ServicesSection } from "./servicesSection";
 import { TopSection } from "./topSection";
+import { ReviewsSection } from "./reviewsSection";
+import { Marginer } from "components/marginer/marginer";
 
 const PageContainer = styled.div`
   width: 100%;
@@ -14,6 +16,8 @@ export function Homepage(props) {
     <PageContainer>
       <TopSection />
       <ServicesSection />
+      <Marginer direction="vertical" margin="2rem" />
+      <ReviewsSection />
     </PageContainer>
   );
 }

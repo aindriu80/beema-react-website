@@ -30,7 +30,7 @@ export function ServicesSection(props) {
       />
       <OurService
         title="Mobile optimized"
-        description="We build and deliver fully integrated web apps with customized control panels that fit your company needs"
+        description="We build and deliver fully integrated web apps with cus tomized control panels that fit your company needs"
         imgUrl={ServiceImg2}
         isReversed
       />
