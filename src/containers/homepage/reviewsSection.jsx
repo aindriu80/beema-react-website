@@ -1,6 +1,6 @@
 import { Marginer } from "components/marginer/marginer";
 import { ReviewCard } from "components/reviewCard/reviewCard";
-import { CarouselProvider, Slide, Slider } from "pure-react-carousel";
+import { CarouselProvider, DotGroup, Slide, Slider } from "pure-react-carousel";
 import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
@@ -9,10 +9,41 @@ import { SectionTitle } from "../../components/sectionTitle/sectionTitle";
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 const ReviewsContainer = styled(Element)`
-  height: 800px;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+const StyledCarouselProvider = styled(CarouselProvider)`
+  width: 50%;
+`;
+
+const StyledSlide = styled(Slide)`
+  .carousel__inner-slide {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+const StyledDotGroup = styled(DotGroup)`
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  button {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #e4e4e4;
+    border: none;
+    outline: none;
+    &:not(:last-of-type) {
+      margin-right: 3px;
+    }
+  }
+
+  .carousel__dot--selected {
+    background-color: #c4c4c4;
+  }
 `;
 
 export function ReviewsSection(props) {
@@ -20,21 +51,33 @@ export function ReviewsSection(props) {
     <ReviewsContainer>
       <SectionTitle>What others are saying about us</SectionTitle>
       <Marginer direction="vertical" margin="3em" />
-      <CarouselProvider
+      <StyledCarouselProvider
         naturalSlideWidth={200}
-        naturalSlideHeight={300}
-        totalSlides={2}
-        visibleSlides={1}
+        naturalSlideHeight={250}
+        totalSlides={5}
+        visibleSlides={2}
       >
         <Slider>
-          <Slide index={0}>
+          <StyledSlide index={0}>
             <ReviewCard />
-          </Slide>
-          <Slide index={1}>
+          </StyledSlide>
+          <StyledSlide index={1}>
             <ReviewCard />
-          </Slide>
+          </StyledSlide>
+          <StyledSlide index={2}>
+            <ReviewCard />
+          </StyledSlide>
+
+          <StyledSlide index={3}>
+            <ReviewCard />
+          </StyledSlide>
+
+          <StyledSlide index={4}>
+            <ReviewCard />
+          </StyledSlide>
         </Slider>
-      </CarouselProvider>
+        <StyledDotGroup />
+      </StyledCarouselProvider>
     </ReviewsContainer>
   );
 }
