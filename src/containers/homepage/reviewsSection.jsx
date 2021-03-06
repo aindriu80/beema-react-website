@@ -8,6 +8,11 @@ import { SectionTitle } from "../../components/sectionTitle/sectionTitle";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 
+import UserImg1 from "../../assets/pictures/profile_picture_1.jpg";
+import UserImg2 from "../../assets/pictures/profile_picture_2.jpg";
+import UserImg3 from "../../assets/pictures/profile_picture_3.jpg";
+import UserImg4 from "../../assets/pictures/profile_picture_4.jpeg";
+
 const ReviewsContainer = styled(Element)`
   height: 700px;
   display: flex;
@@ -53,27 +58,39 @@ export function ReviewsSection(props) {
       <Marginer direction="vertical" margin="3em" />
       <StyledCarouselProvider
         naturalSlideWidth={200}
-        naturalSlideHeight={250}
+        naturalSlideHeight={220}
         totalSlides={5}
         visibleSlides={2}
       >
         <Slider>
           <StyledSlide index={0}>
-            <ReviewCard />
+            <ReviewCard
+              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              username="Sarah Smith"
+              userImgUrl={UserImg1}
+            />
           </StyledSlide>
           <StyledSlide index={1}>
-            <ReviewCard />
+            <ReviewCard
+              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              username="John Coner"
+              userImgUrl={UserImg2}
+            />
           </StyledSlide>
           <StyledSlide index={2}>
-            <ReviewCard />
+            <ReviewCard
+              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              username="Paul Wish"
+              userImgUrl={UserImg3}
+            />
           </StyledSlide>
 
           <StyledSlide index={3}>
-            <ReviewCard />
-          </StyledSlide>
-
-          <StyledSlide index={4}>
-            <ReviewCard />
+            <ReviewCard
+              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              username="Joe Soap"
+              userImgUrl={UserImg4}
+            />
           </StyledSlide>
         </Slider>
         <StyledDotGroup />

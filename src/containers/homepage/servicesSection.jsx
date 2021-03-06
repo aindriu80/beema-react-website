@@ -12,7 +12,7 @@ import ServiceImg3 from "../../assets/illustrations/bug_fixed.png";
 
 const ServicesContainer = styled(Element)`
   width: 100%;
-  min-height: 1400px;
+  min-height: 1100px;
   display: flex;
   flex-direction: column;
   align-items: center;
