@@ -35,14 +35,14 @@ const StyledDotGroup = styled(DotGroup)`
   display: flex;
   justify-content: center;
   button {
-    width: 11px;
-    height: 11px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #e4e4e4;
     border: none;
     outline: none;
     &:not(:last-of-type) {
-      margin-right: 3px;
+      margin-right: 2px;
     }
   }
 
