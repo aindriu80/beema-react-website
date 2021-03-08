@@ -33,7 +33,7 @@ const LogoText = styled.div`
   font-size: ${({ inline, small }) =>
     inline ? "18px" : small ? "23px" : "40px"};
   color: ${({ inline }) => (inline ? "#fff" : theme.primary)};
-  font-weight: 700;
+  font-weight: 850;
 `;
 
 export function Logo(props) {

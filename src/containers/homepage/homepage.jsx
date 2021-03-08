@@ -5,6 +5,7 @@ import { TopSection } from "./topSection";
 import { ReviewsSection } from "./reviewsSection";
 import { Marginer } from "components/marginer/marginer";
 import { MoreAboutSection } from "./moreAboutSection";
+import { Footer } from "components/footer/footer";
 
 const PageContainer = styled.div`
   width: 100%;
@@ -21,6 +22,8 @@ export function Homepage(props) {
       <Marginer direction="vertical" margin="2rem" />
       <ReviewsSection />
       <MoreAboutSection />
+      <Marginer direction="vertical" margin="9rem" />
+      <Footer />
     </PageContainer>
   );
 }
