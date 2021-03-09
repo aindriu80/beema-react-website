@@ -13,6 +13,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: #1f1f1f;
+  position: relative;
 `;
 
 const MotivationalText = styled.h1`
@@ -23,17 +24,10 @@ const MotivationalText = styled.h1`
   margin: 0;
 `;
 
-const Line = styled.span`
-  min-width: 100%;
-  min-height: 1px;
-  margin-bottom: 1em;
-  background-color: #cdcdcd;
-  display: flex;
-`;
 const Acessibilitycontainer = styled.div`
   width: 80%;
-  padding-top: 6px;
-  padding-left: 5px;
+  padding-top: 12px;
+  padding-left: 8px;
   padding-right: 5px;
   display: flex;
   border-top: 1px solid #cdcdcd;
@@ -53,9 +47,36 @@ const SocialIcon = styled.div`
   color: #fff;
   font-size: 20px;
   transition: all 200ms ease-in-out;
+  cursor: pointer;
+
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
   &:hover {
     color: #adadad;
   }
+`;
+
+const Link = styled.a`
+  color: #fff;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  font-size: 14px;
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
+  &:hover {
+    color: #adadad;
+  }
+`;
+
+const RightsReserved = styled.div`
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 12px;
 `;
 export function Footer(props) {
   return (
@@ -70,7 +91,11 @@ export function Footer(props) {
       <Button>Start your Projects</Button>
       <Marginer direction="vertical" margin="5em" />
       <Acessibilitycontainer>
-        <PrivacyContainer>privacy</PrivacyContainer>
+        <PrivacyContainer>
+          <Link>Privacy Policy</Link>
+          <Link>Terms of Service</Link>
+          <Link>Contact</Link>
+        </PrivacyContainer>
         <SocialContainer>
           <SocialIcon>
             <FontAwesomeIcon icon={faTwitter} />
@@ -80,6 +105,7 @@ export function Footer(props) {
           </SocialIcon>
         </SocialContainer>
       </Acessibilitycontainer>
+      <RightsReserved>&#169; 2020 Beema. All rights reserved</RightsReserved>
     </FooterContainer>
   );
 }
