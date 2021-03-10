@@ -9,6 +9,7 @@ const MoreAboutContainer = styled(Element)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
 `;
 
 const AboutContainer = styled.div`
@@ -16,6 +17,11 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 1000px;
+
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+    flex-direction: column-reverse;
+  }
 `;
 
 const AboutText = styled.p`
@@ -28,6 +34,12 @@ const AboutImg = styled.img`
   width: 600px;
   height: 500px;
   margin-left: 2em;
+
+  @media screen and (max-width: 480px) {
+    width: 370px;
+    height: 290px;
+    margin-left: 0;
+  }
 `;
 export function MoreAboutSection(props) {
   return (

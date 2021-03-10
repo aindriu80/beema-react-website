@@ -36,7 +36,7 @@ export function ServicesSection(props) {
       />
       <OurService
         title="Quality is our priority"
-        description="We ahve teams of professional developers, designers and managers that ensures delivering the best software quality for your company"
+        description="We have teams of professional developers, designers and managers that ensures delivering the best software quality for your company"
         imgUrl={ServiceImg3}
       />
     </ServicesContainer>

@@ -33,6 +33,12 @@ const Acessibilitycontainer = styled.div`
   border-top: 1px solid #cdcdcd;
   color: #fff;
   justify-content: space-between;
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 `;
 
 const PrivacyContainer = styled.div`
@@ -51,7 +57,16 @@ const SocialIcon = styled.div`
 
   &:not(:last-of-type) {
     margin-right: 12px;
+
+    @media screen and (max-width: 480px) {
+      margin-right: 9px;
+    }
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+  }
+
   &:hover {
     color: #adadad;
   }
@@ -64,7 +79,16 @@ const Link = styled.a`
   font-size: 14px;
   &:not(:last-of-type) {
     margin-right: 12px;
+
+    @media screen and (max-width: 480px) {
+      margin-right: 8px;
+    }
   }
+
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+
   &:hover {
     color: #adadad;
   }

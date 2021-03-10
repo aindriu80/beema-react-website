@@ -6,11 +6,20 @@ const ServicesContainer = styled.div`
   align-items: center;
   flex-direction: ${({ isReversed }) => isReversed && "row-reverse"};
   margin-bottom: 4em;
+  flex-wrap: wrap-reverse;
+  @media screen and (max-width: 480px) {
+    justify-content: center;
+  }
 `;
 
 const ServiceImg = styled.img`
   width: 22em;
   height: 17em;
+
+  @media screen and (max-width: 480px) {
+    width: 18em;
+    height: 13em;
+  }
 `;
 
 const DescriptionContainer = styled.div`
@@ -18,12 +27,20 @@ const DescriptionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 60%;
+
+  @media screen and (max-width: 480px) {
+    max-width: 100%;
+  }
 `;
 const Title = styled.h2`
   color: #000;
   font-size: 28px;
   font-weight: 700;
   margin: 5px 0;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 1.5rem;
+  }
 `;
 
 const Details = styled.div`
@@ -31,6 +48,10 @@ const Details = styled.div`
   font-size: 21px;
   text-align: center;
   max-width: 50%;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export function OurService(props) {
